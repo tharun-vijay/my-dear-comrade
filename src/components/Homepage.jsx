@@ -404,7 +404,7 @@ function Homepage() {
               <p className="letter-text">
                 Today, you turn 23 my love and so did I, two days ago. That's a
                 great milestone and I am fortunate enough to reach that
-                milestone 2 days before you. Unfortunately I wasn't there for
+                milestone 2 days before you. I am glad that we are moving in a similar pace. Unfortunately I wasn't there for
                 the previous 22 one's but I really want to be a part of the
                 journey that lies ahead. As days pass by, we grow and so does my
                 love for you. And I am fortunate enough to know that my love for
