@@ -67,7 +67,7 @@ function Landing() {
       </div>
 
       <div className="landing-content">
-        <p className="landing-subtitle">A Celebration of You</p>
+        <p className="landing-subtitle">Small Note of Love</p>
         <h1 className="landing-title">Happy Birthday</h1>
         <h2 className="landing-name">Lavanya</h2>
 
@@ -102,7 +102,7 @@ function Landing() {
           onClick={handleEnter}
           disabled={!isReady}
         >
-          {isReady ? "Enter Celebration 💕" : "Some more minutes darling 😉"}
+          {isReady ? "Now, my ledger book says you are officialy 23 💕" : "You have got few more minutes to turn 23, darling😉"}
         </button>
       </div>
     </div>

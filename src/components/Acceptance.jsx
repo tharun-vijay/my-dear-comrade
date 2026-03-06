@@ -93,7 +93,11 @@ function Acceptance() {
         <h2 className="acceptance-subtitle">I Knew You'd Say Yes 🥰</h2>
         <div className="acceptance-ornament" />
         <p className="acceptance-message">
-          No more worries about me making up stories for Wifey typos. My Dear Comrade!💕
+          Now I can finally stop pretending those “wifey” typos were accidents.
+          Now I can hear your "Yeee slu" day in and day out. I promise to stand
+          beside you, annoy you, support you, and celebrate every victory with
+          you. From here on, we face everything in between till the end of journey. 
+         
         </p>
         <div className="acceptance-emoji-row">
           <span>💕</span>
