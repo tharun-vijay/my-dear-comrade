@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Landing.css";
 
-const TARGET_DATE = new Date("2026-03-06T00:00:00+05:30").getTime();
+const TARGET_DATE = new Date("2026-03-06T14:58:00+05:30").getTime();
 
 function Landing() {
   const navigate = useNavigate();
