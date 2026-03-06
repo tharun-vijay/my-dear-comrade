@@ -1,0 +1,181 @@
+/* ===== Acceptance Page ===== */
+.acceptance {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--burgundy-dark) 0%, #5c252c 40%, var(--burgundy) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Hearts burst */
+.acceptance-hearts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.burst-heart {
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: burstHeart ease-out forwards;
+}
+
+@keyframes burstHeart {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.3) rotate(0deg);
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) scale(1) rotate(var(--rot));
+  }
+}
+
+/* Confetti */
+.confetti-piece {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  opacity: 0;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    opacity: 1;
+    transform: translateY(-20vh) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(110vh) rotate(720deg);
+  }
+}
+
+/* Content */
+.acceptance-content {
+  position: relative;
+  z-index: 1;
+  animation: scaleIn 0.8s var(--ease-bounce) both;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.acceptance-big-heart {
+  font-size: 5rem;
+  animation: heartbeat 1.2s ease-in-out infinite;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.2); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+}
+
+.acceptance-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--champagne) 0%, var(--gold) 50%, var(--champagne) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  animation: scaleIn 0.8s var(--ease-bounce) 0.3s both;
+}
+
+.acceptance-subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 500;
+  color: var(--blush);
+  margin-bottom: 0.8rem;
+  animation: scaleIn 0.8s var(--ease-bounce) 0.5s both;
+}
+
+.acceptance-message {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--rose-gold-light);
+  max-width: 420px;
+  line-height: 1.7;
+  font-style: italic;
+  animation: scaleIn 0.8s var(--ease-bounce) 0.7s both;
+}
+
+.acceptance-ornament {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rose-gold), transparent);
+  margin: 1.5rem auto;
+  animation: scaleIn 0.8s var(--ease-bounce) 0.6s both;
+}
+
+.acceptance-emoji-row {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  animation: scaleIn 0.8s var(--ease-bounce) 0.9s both;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Ambient glow */
+.acceptance-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(183, 110, 121, 0.2) 0%, transparent 70%);
+  animation: glowFloat 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.acceptance-glow:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.acceptance-glow:nth-child(2) {
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+@keyframes glowFloat {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(30px, -20px) scale(1.2); }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  .acceptance-big-heart {
+    font-size: 3.5rem;
+  }
+  .acceptance-message {
+    font-size: 1rem;
+  }
+}

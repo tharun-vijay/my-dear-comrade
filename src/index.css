@@ -1,0 +1,86 @@
+/* ===== CSS Custom Properties ===== */
+:root {
+  --burgundy: #722F37;
+  --burgundy-dark: #4A1C23;
+  --burgundy-light: #8B3A42;
+  --rose-gold: #B76E79;
+  --rose-gold-light: #D4A0A7;
+  --blush: #F4E1E6;
+  --blush-light: #FBF0F3;
+  --champagne: #F7E7CE;
+  --cream: #FFF8F0;
+  --warm-white: #FFFCF7;
+  --gold: #C9A96E;
+  --gold-light: #E8D5A8;
+  --text-dark: #3A1F25;
+  --text-medium: #6B4450;
+  --text-light: #9B7A85;
+  --overlay-dark: rgba(74, 28, 35, 0.7);
+  --overlay-light: rgba(244, 225, 230, 0.3);
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Cormorant Garamond', 'Times New Roman', serif;
+
+  --ease-romantic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: var(--cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--blush-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--rose-gold-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rose-gold);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: var(--rose-gold-light);
+  color: var(--burgundy-dark);
+}
